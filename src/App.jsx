@@ -1,7 +1,12 @@
+import Layout from './components/Layout.jsx';
 import Router from './components/Router.jsx';
 
 function App() {
-  return <Router />;
+  return (
+    <Layout>
+      <Router />
+    </Layout>
+  );
 }
 
 export default App;
