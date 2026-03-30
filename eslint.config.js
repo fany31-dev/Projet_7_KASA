@@ -12,7 +12,11 @@ export default defineConfig([
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
+      ...prettierConfig.flatConfig,
     ],
+    plugins: {
+      prettier: prettierPlugin,
+    },
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -24,6 +28,7 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'prettier/prettier': 'error', // Signaler les erreurs Prettier comme erreurs ESLint
     },
   },
 ])
