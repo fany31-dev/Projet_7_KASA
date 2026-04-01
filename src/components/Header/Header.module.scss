@@ -1,7 +1,26 @@
 .header {
     width: auto;
-    height: 50px;
-    background-color: black;
-    color: white;
+    height: 68px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    padding: 20px;
+
+    &__navigation {
+        gap: 50px;
+        display: flex;
+        padding-top: 10px;
+        margin: 20px;
+
+        a {
+            font-size: $size-nav;
+        }
+    }
+}
+
+.header__logo {
+    width: 210px;
+    height: 68px;
 }
