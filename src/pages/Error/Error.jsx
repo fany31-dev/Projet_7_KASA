@@ -1,4 +1,4 @@
-import React from 'react';
+import './Error.scss';
 
 function Error() {
   return <h1> erreur 404</h1>;

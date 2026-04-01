@@ -1,4 +1,4 @@
-import React from 'react';
+import './Logements.scss';
 
 function Logement() {
   return <h1>Logements</h1>;
