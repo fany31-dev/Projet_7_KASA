@@ -1,0 +1,49 @@
+.error {
+    height: 595px;
+    color: $color-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 200px;
+        padding-top: 70px;
+
+    }
+
+    &__text {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    &__link {
+        font-size: 18px;
+        text-decoration: underline;
+    }
+}
+
+
+
+/************* Mobile *******************/
+@media (max-width: 768px) {
+    .error {
+
+        &__title {
+            font-size: 96px;
+
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+    }
+
+
+}
