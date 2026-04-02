@@ -1,9 +1,10 @@
+import Banner from '../../components/Banner/Banner';
 import './Home.scss';
 
 function Home() {
   return (
     <div className="container">
-      <h1>Bienvenue sur la page Home</h1>
+      <Banner />
     </div>
   );
 }
