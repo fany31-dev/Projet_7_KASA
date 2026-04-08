@@ -10,7 +10,7 @@ function Banner() {
           src={BannerImage}
           alt="Banniere paysage de falaise au bord de l'océan"
         />
-        <p className={styles.banner__text}>Chez nous, partout et ailleurs</p>
+        <h1 className={styles.banner__text}>Chez nous, partout et ailleurs</h1>
       </div>
     </>
   );
