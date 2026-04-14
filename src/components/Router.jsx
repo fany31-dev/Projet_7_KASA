@@ -9,7 +9,7 @@ function Router() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/logements" element={<Logements />} />
+      <Route path="/logements/:id" element={<Logements />} />
       <Route path="*" element={<Error />} />
       {/* si pas d'url trouvé erreur 404 */}
     </Routes>
