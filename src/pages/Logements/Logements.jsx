@@ -1,4 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom';
+import DataLogement from '@/data/logements.json';
+import Banner from '../../components/Banner/Banner';
 import Collapse from '../../components/Collapse/Collapse';
 import './Logements.scss';
 
@@ -13,6 +15,12 @@ function Logements() {
   return (
     <>
       <div className="ficheLogement">
+        <Banner
+          pictures={logement.pictures}
+          alt={logement.title}
+          texte={logement.title}
+        />
+
         <div className="ficheLogement__title">
           <h1 className="ficheLogement__title__name">{logement.title}</h1>
           <p className="ficheLogement__title__localisation">
