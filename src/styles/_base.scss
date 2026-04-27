@@ -2,21 +2,14 @@
 //-----------------
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-general;
-    font-size: $size-text;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-general;
+  font-size: $size-text;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
-
-.main {
-    display: flex;
-    justify-content: center;
-}
-
-
