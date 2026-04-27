@@ -1,71 +1,67 @@
 .header {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  &__logo {
+    width: 210px;
+    height: 68px;
+  }
+
+  &__container {
     width: auto;
+    height: 68px;
     display: flex;
-    flex-direction: column;
-    margin-left:30px;
-    margin-right:30px;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    padding: 20px;
+  }
 
-    &__logo {
-        width: 210px;
-        height: 68px;
+  &__navigation {
+    display: flex;
+    gap: 50px;
+    padding-top: 10px;
+    margin: 20px;
+
+    .nav__link {
+      font-size: $size-nav;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      &:hover {
+        font-weight: bold;
+      }
+
+      &.active {
+        border-bottom: 1px solid black;
+      }
     }
-
-    &__container {
-        width: auto;
-        height: 68px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        align-items: center;
-        margin: 40px;
-        padding: 20px;
-    }
-
-    &__navigation {
-        display: flex;
-        gap: 50px;
-        padding-top: 10px;
-        margin: 20px;
-
-        .nav__link {
-            font-size: $size-nav;
-            text-transform: uppercase;
-
-            &:hover {
-                font-weight: bold;
-            }
-
-            &.active {
-                border-bottom: 1px solid black;
-            }
-        }
-
-    }
+  }
 }
-
 
 /************* Mobile *******************/
 @media (max-width: 768px) {
-
-    .header {
-
-        &__logo {
-            width: 145px;
-            height: 47px;
-        }
-
-        &__container {
-
-            margin: 5px;
-            padding: 0px;
-        }
-
-        &__navigation {
-            gap: 20px;
-
-            .nav__link {
-                font-size: 12px;
-            }
-        }
+  .header {
+    &__logo {
+      width: 145px;
+      height: 47px;
     }
+
+    &__container {
+      margin: 5px;
+      padding: 0px;
+    }
+
+    &__navigation {
+      gap: 20px;
+
+      .nav__link {
+        font-size: 12px;
+      }
+    }
+  }
 }
