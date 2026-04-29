@@ -4,7 +4,8 @@
   margin: 20px auto;
 
   &__ficheLogement {
-    max-width: 582px;
+    width: 582px;
+    height: 279px;
   }
 
   &__title {
@@ -37,11 +38,16 @@
   &__text {
     overflow: hidden;
     animation: slide-up 0.3s forwards ease-in-out;
+    &__list {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+    }
   }
 
   &__text__open {
-    overflow: hidden;
     height: auto;
+    overflow: hidden;
     animation: slide-down 0.3s forwards ease-in-out;
     background-color: $color-bckgrd-collapse;
     border-radius: 5px;

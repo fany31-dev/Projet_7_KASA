@@ -30,7 +30,15 @@ function Collapse({ title, texte, isLogementPage }) {
             isOpen ? styles.collapse__text__open : styles.collapse__text
           }
         >
-          <p>{texte}</p>
+          {Array.isArray(texte) ? (
+            <ul className={styles.collapse__text__list}>
+              {texte.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{texte}</p>
+          )}
         </div>
       </div>
     </>
