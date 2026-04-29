@@ -1,42 +1,44 @@
 .banner {
+  width: 100%;
+  max-width: 1240px;
+  max-height: 223px;
+  min-height: 111px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  &__image {
+    max-width: 1240px;
     width: 100%;
-    max-height: 223px;
-    min-height: 111px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+    border-radius: 25px;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
 
-    &__image {
-        width: 100%;
-        border-radius: 25px;
-        object-fit: cover;
-        filter: brightness(0.6);
-    }
-
-    &__text {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        color: white;
-        font-size: $size-text-banner;
-        font-weight: 700;
-        z-index: 2;
-        padding: 0 20px;
-    }
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: $size-text-banner;
+    font-weight: 700;
+    z-index: 2;
+    padding: 0 20px;
+  }
 }
 
 /********version mobile*****/
 
 @media (max-width: 768px) {
-    .banner {
-        min-width: 330px;
-        height: 111px;
-        padding: 0px;
+  .banner {
+    min-width: 330px;
+    height: 111px;
+    padding: 0px;
 
-        &__text {
-            font-size: $size-title_2_lg;
-        }
+    &__text {
+      font-size: $size-title_2_lg;
     }
+  }
 }
