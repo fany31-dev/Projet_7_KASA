@@ -1,48 +1,50 @@
 .card {
-    width: 100%;
-    min-width: 325px;
-    height: 340px;
-    background-color: $color-primary;
-    /*si pblm d'image fond orange*/
-    border-radius: 10px;
-    display: flex;
+  width: 100%;
+  min-width: 335px;
+  height: 340px;
+  background-color: $color-primary;
+  /*si pblm d'image fond orange*/
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  &__image {
     position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
 
-    &:hover {
-        transform: scale(1.10);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    &__image {
-        position: relative;
-        width: 100%;
-        object-fit: cover;
-        z-index: 1;
-    }
-
-    &__title {
-        position: absolute;
-        top: 290px;
-        left: 10px;
-        z-index: 2;
-        color: white;
-        font-weight: 700;
-        font-size: $Size-title_2;
-    }
+  &__title {
+    position: absolute;
+    top: 290px;
+    left: 10px;
+    z-index: 2;
+    color: white;
+    font-weight: 700;
+    font-size: $Size-title_2;
+  }
 }
 
 /************* Mobile *******************/
 @media (max-width: 768px) {
-    .card {
-        height: 250px;
-        &__title {
-            top: 205px;
-            left: 10px;
-            font-size: $size-text;
-        }
+  .card {
+    height: 250px;
+    &__title {
+      top: 205px;
+      left: 10px;
+      font-size: $size-text;
     }
+  }
 }
