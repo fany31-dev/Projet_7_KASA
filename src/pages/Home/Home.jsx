@@ -12,7 +12,7 @@ function Home() {
           <Banner
             image={BannerImage}
             alt="Banniere paysage de falaise au bord de l'océan"
-            texte="Chez nous, partout et ailleurs"
+            texte="Chez vous, partout et ailleurs"
           />
         </div>
         <div className="container__card">
