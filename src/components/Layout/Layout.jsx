@@ -2,12 +2,14 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import styles from './Layout.module.scss';
 
-function Layout({ children }) {
+function Layout({ children, mainClassName }) {
   return (
     <>
       <div className={styles.layout}>
         <Header />
-        <main className={styles.layout__main}>{children}</main>
+        <main className={`${styles.layout__main} ${mainClassName || ''}`}>
+          {children}
+        </main>
         <Footer />
       </div>
     </>
