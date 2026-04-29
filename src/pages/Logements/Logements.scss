@@ -1,0 +1,58 @@
+.ficheLogement {
+  &__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  &__title {
+    width: 635px;
+    height: 77px;
+    padding: 10px 0;
+
+    &__name {
+      font-weight: 500;
+      font-size: 36px;
+      color: $color-primary;
+    }
+
+    &__localisation {
+      font-weight: 500;
+    }
+  }
+  &__host {
+    width: 167px;
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__name {
+      width: 93px;
+      height: 52px;
+      color: $color-primary;
+    }
+    &__picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+  }
+}
+
+/********version mobile*****/
+
+@media (max-width: 768px) {
+  .ficheLogement {
+    &__description {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
