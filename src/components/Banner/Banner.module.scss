@@ -1,23 +1,56 @@
 .banner {
   width: 100%;
   max-width: 1240px;
-  max-height: 223px;
+  min-width: 335px;
+  max-height: 233px;
   min-height: 111px;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  padding: 10px;
 
   &__image {
     max-width: 1240px;
     width: 100%;
+    display: block;
     border-radius: 25px;
     object-fit: cover;
     filter: brightness(0.6);
   }
+  &.noFilter {
+    filter: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    &__left {
+      left: 10px;
+    }
+    &__right {
+      right: 10px;
+    }
+  }
+  &__counter {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 3;
+  }
 
   &__text {
+    max-width: 733px;
+    max-height: 68px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -25,20 +58,39 @@
     font-size: $size-text-banner;
     font-weight: 700;
     z-index: 2;
-    padding: 0 20px;
+    text-shadow: /*** contour des lettres en noir ***/
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 2px 5px rgba(0, 0, 0, 0.5);
   }
 }
 
-/********version mobile*****/
+.carrouselHeight {
+  max-height: 415px; /* hauteur plus grande pour le carrousel */
+}
+/********version tablette *****/
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .banner {
-    min-width: 330px;
+    padding: 0px;
+
+    &__text {
+      font-size: 36px;
+      padding: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
     height: 111px;
     padding: 0px;
 
     &__text {
       font-size: $size-title_2_lg;
+      padding: 0 20px;
     }
   }
 }

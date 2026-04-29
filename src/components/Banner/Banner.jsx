@@ -4,7 +4,7 @@ import ArrowNext from '@/assets/icones/arrow_next.png';
 import DataLogement from '@/data/logements.json';
 import styles from './Banner.module.scss';
 
-function Banner({ image, alt, texte, pictures }) {
+function Banner({ image, alt, texte, pictures, noFilter, isCarrousel }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = pictures?.length ? pictures : image ? [image] : [];
@@ -19,9 +19,12 @@ function Banner({ image, alt, texte, pictures }) {
 
   return (
     <>
-      <div className={styles.banner}>
+      <div
+        className={`${styles.banner} ${isCarrousel ? styles.carrouselHeight : ''}`}
+      >
         <img
           className={styles.banner__image}
+          style={{ filter: noFilter ? 'none' : 'brightness(0.6)' }}
           src={images[currentIndex]}
           alt={alt || 'Bannière'}
         />
@@ -29,7 +32,7 @@ function Banner({ image, alt, texte, pictures }) {
           <>
             <button
               onClick={prevPicture}
-              className={styles.arrowLeft}
+              className={`${styles.banner__arrow} ${styles.banner__arrow__left}`}
               aria-label="Image précédente"
             >
               <img src={ArrowBack} alt={'Image précédente'} />
@@ -37,12 +40,12 @@ function Banner({ image, alt, texte, pictures }) {
 
             <button
               onClick={nextPicture}
-              className={styles.arrowRight}
+              className={`${styles.banner__arrow} ${styles.banner__arrow__right}`}
               aria-label="Image suivante"
             >
               <img src={ArrowNext} alt={'Image suivante'} />
             </button>
-            <span className={styles.counter}>
+            <span className={styles.banner__counter}>
               {currentIndex + 1} / {images.length}
             </span>
           </>
