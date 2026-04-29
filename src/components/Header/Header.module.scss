@@ -2,8 +2,8 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
 
   &__logo {
     width: 210px;
@@ -30,7 +30,6 @@
     .nav__link {
       font-size: $size-nav;
       font-weight: 500;
-      text-transform: uppercase;
 
       &:hover {
         font-weight: bold;
@@ -43,7 +42,26 @@
   }
 }
 
-/************* Mobile *******************/
+/*****tablette ***/
+
+@media (max-width: 1024px) {
+  .header {
+    &__container {
+      margin: 5px;
+      padding: 0px;
+    }
+
+    &__navigation {
+      gap: 20px;
+
+      .nav__link {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/************** Mobile ***************/
 @media (max-width: 768px) {
   .header {
     margin-left: 10px;
@@ -57,13 +75,8 @@
       margin: 5px;
       padding: 0px;
     }
-
-    &__navigation {
-      gap: 20px;
-
-      .nav__link {
-        font-size: 12px;
-      }
+    .nav__link {
+      font-size: 12px;
     }
   }
 }

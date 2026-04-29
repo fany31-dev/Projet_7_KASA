@@ -5,39 +5,37 @@ import styles from './Header.module.scss';
 function Header() {
   return (
     <>
-      <div className={styles.header}>
-        <header className={styles.header__container}>
-          <div>
-            <img
-              src={LogoKasaOrange}
-              alt="Logo Kasa"
-              className={styles.header__logo}
-            />
-          </div>
-          <nav className={styles.header__navigation}>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? `${styles.nav__link} ${styles.active}`
-                  : styles.nav__link
-              }
-            >
-              Accueil
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? `${styles.nav__link} ${styles.active}`
-                  : styles.nav__link
-              }
-            >
-              A propos
-            </NavLink>
-          </nav>
-        </header>
-      </div>
+      <header className={styles.header__container}>
+        <div>
+          <img
+            src={LogoKasaOrange}
+            alt="Logo Kasa"
+            className={styles.header__logo}
+          />
+        </div>
+        <nav className={styles.header__navigation}>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__link} ${styles.active}`
+                : styles.nav__link
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? `${styles.nav__link} ${styles.active}`
+                : styles.nav__link
+            }
+          >
+            A Propos
+          </NavLink>
+        </nav>
+      </header>
     </>
   );
 }
