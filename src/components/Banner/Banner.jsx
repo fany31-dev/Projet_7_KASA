@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ArrowBack from '@/assets/icones/arrow_back.png';
 import ArrowNext from '@/assets/icones/arrow_next.png';
 import DataLogement from '@/data/logements.json';
@@ -16,6 +16,15 @@ function Banner({ image, alt, texte, pictures, noFilter, isCarrousel }) {
   const nextPicture = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
   };
+
+  useEffect(() => {
+    if (!isCarrousel || images.length <= 1) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3000); // toutes les 3 secondes
+    return () => clearInterval(interval);
+  }, [images.length, isCarrousel]);
 
   return (
     <>
