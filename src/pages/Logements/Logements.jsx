@@ -2,6 +2,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import DataLogement from '@/data/logements.json';
 import Banner from '../../components/Banner/Banner';
 import Collapse from '../../components/Collapse/Collapse';
+import Tag from '../../components/Tag/Tag';
 import './Logements.scss';
 
 function Logements() {
@@ -36,6 +37,10 @@ function Logements() {
               alt={logement.host.name}
             />
           </div>
+        </div>
+
+        <div>
+          <Tag tags={logement.tags} />
         </div>
         <div className="ficheLogement__description">
           <Collapse
