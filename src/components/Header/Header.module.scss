@@ -1,82 +1,33 @@
-.header {
-  width: auto;
+.header__container {
+  max-width: 1240px;
+  height: 68px;
+  width: 100%;
+  margin: 40px auto 20px auto;
+  padding: 5px;
   display: flex;
-  flex-direction: column;
-  margin-left: 20px;
-  margin-right: 20px;
+  justify-content: space-between;
+  align-items: center;
 
   &__logo {
     width: 210px;
     height: 68px;
   }
 
-  &__container {
-    width: auto;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    margin: 40px;
-    padding: 20px;
-  }
-
-  &__navigation {
+  .header__navigation {
     display: flex;
     gap: 50px;
     padding-top: 10px;
     margin: 20px;
-
-    .nav__link {
-      font-size: $size-nav;
-      font-weight: 500;
-
-      &:hover {
-        font-weight: bold;
-      }
-
-      &.active {
-        border-bottom: 1px solid black;
-      }
-    }
   }
-}
 
-/*****tablette ***/
-
-@media (max-width: 1024px) {
-  .header {
-    &__container {
-      margin: 5px;
-      padding: 0px;
+  .nav__link {
+    font-size: $size-nav;
+    font-weight: 500;
+    &:hover {
+      font-weight: bold;
     }
-
-    &__navigation {
-      gap: 20px;
-
-      .nav__link {
-        font-size: 18px;
-      }
-    }
-  }
-}
-
-/************** Mobile ***************/
-@media (max-width: 768px) {
-  .header {
-    margin-left: 10px;
-    margin-right: 10px;
-    &__logo {
-      width: 145px;
-      height: 47px;
-    }
-
-    &__container {
-      margin: 5px;
-      padding: 0px;
-    }
-    .nav__link {
-      font-size: 12px;
+    &.active {
+      border-bottom: 1px solid black;
     }
   }
 }
