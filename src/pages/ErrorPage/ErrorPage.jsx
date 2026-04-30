@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import './Error.scss';
+import './ErrorPage.scss';
 import Layout from '../../components/Layout/Layout';
 
-function Error() {
+function ErrorPage() {
   return (
     <layout mainClassName="error__main">
       <div className="error">
@@ -18,4 +18,4 @@ function Error() {
   );
 }
 
-export default Error;
+export default ErrorPage;
