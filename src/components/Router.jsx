@@ -11,7 +11,6 @@ function Router() {
       <Route path="/about" element={<About />} />
       <Route path="/logements/:id" element={<Logements />} />
       <Route path="*" element={<ErrorPage />} />
-      {/* si pas d'url trouvé erreur 404 */}
     </Routes>
   );
 }
