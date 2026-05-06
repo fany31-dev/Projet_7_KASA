@@ -1,6 +1,5 @@
 .card {
   width: 100%;
-  min-width: 335px;
   height: 340px;
   background-color: $color-primary;
   /*si pblm d'image fond orange*/
@@ -28,7 +27,7 @@
 
   &__title {
     position: absolute;
-    top: 290px;
+    top: 285px;
     left: 10px;
     z-index: 2;
     color: white;
@@ -40,11 +39,12 @@
 /************* Mobile *******************/
 @media (max-width: 768px) {
   .card {
-    height: 250px;
+    height: 255px;
+
     &__title {
-      top: 205px;
-      left: 10px;
+      width: 270px;
       font-size: $size-text;
+      top: 200px;
     }
   }
 }

@@ -3,21 +3,20 @@
   height: 68px;
   width: 100%;
   margin: 40px auto 20px auto;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  &__logo {
-    width: 210px;
-    height: 68px;
-  }
-
   .header__navigation {
     display: flex;
     gap: 50px;
-    padding-top: 10px;
     margin: 20px;
+  }
+
+  .header__logo {
+    width: 210px;
+    height: 67px;
   }
 
   .nav__link {
@@ -28,6 +27,41 @@
     }
     &.active {
       border-bottom: 1px solid black;
+    }
+  }
+}
+
+/************* tablette et Mobile *******************/
+@media (max-width: 768px) {
+  .header__container {
+    min-width: 335px;
+    height: 47px;
+    width: 100%;
+    margin: 20px auto 10px auto;
+    padding: 5px;
+
+    .header__navigation {
+      gap: 25px;
+      margin: 10px;
+    }
+
+    .header__logo {
+      width: 145px;
+      height: 47px;
+      margin: 5px;
+    }
+
+    .nav__link {
+      font-size: 18px;
+    }
+  }
+}
+
+/************* Mobile *******************/
+@media (max-width: 468px) {
+  .header__container {
+    .nav__link {
+      font-size: 12px;
     }
   }
 }
