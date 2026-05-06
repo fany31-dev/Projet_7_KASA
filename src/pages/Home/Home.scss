@@ -8,27 +8,39 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 
   &__card {
     width: 100%;
     height: auto;
-    gap: 50px;
+    gap: 45px;
     background-color: $color-background-gallery;
     display: grid;
     border-radius: 25px;
     grid-template-rows: repeat(auto-fit, minmax(245px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    padding: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    padding: 45px;
+  }
+}
+
+/************* tablette *******************/
+@media (max-width: 768px) {
+  .container {
+    &__card {
+      padding: 20px;
+    }
   }
 }
 
 /************* Mobile *******************/
-@media (max-width: 768px) {
+@media (max-width: 468px) {
   .container {
     gap: 15px;
 
     &__card {
-      padding: 10px;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      padding: 0px;
       gap: 20px;
     }
   }

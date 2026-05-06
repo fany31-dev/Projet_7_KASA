@@ -1,7 +1,11 @@
 .container {
-    width: 100%;
-    max-width: 1240px;
-    display: flex;
-    flex-direction: column;
-}
+  width: 100%;
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 
+  &__banner {
+    max-width: 325px;
+  }
+}
