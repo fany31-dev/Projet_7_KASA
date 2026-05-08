@@ -1,16 +1,73 @@
-# React + Vite
+# Projet Kasa – Projet 7 OpenClassrooms
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Refonte complète du front-end de l’application Kasa.
+**********************************************************************************
 
-Currently, two official plugins are available:
+## Contexte du projet
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dans ce projet, j’ai travaillé en tant que développeur Front-end freelance pour Kasa, une entreprise souhaitant moderniser entièrement son site web, initialement développé il y a 10 ans. L’objectif était de migrer vers une stack JavaScript moderne : Node.js pour le back-end et React pour le front-end.
+Ma mission consistait à :
+• intégrer fidèlement les maquettes Figma,
+• développer l’ensemble du front-end avec React,
+• créer des composants réutilisables,
+• gérer la navigation avec React Router,
+• mettre en place des animations CSS,
+• assurer une interface responsive et accessible.
+**********************************************************************************
+**********************************************************************************
 
-## React Compiler
+### Compétences validées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+• Initialiser une application avec Vite
+• Configurer la navigation avec React Router
+• Développer une interface avec des composants React
+• Mettre en œuvre des animations CSS
+• Structurer les styles avec Sass
 
-## Expanding the ESLint configuration
+### Outils et Technologies utilisées
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+• React 19
+• React Router 7
+• Vite 8
+• Sass
+• Aucune librairie React externe utilisée
+Note : Ce projet utilise les versions React, React Router et Vite, fournies par le template initial.
+
+#### Fonctionnalités principales
+
+Page d’accueil
+• Affichage de toutes les locations
+• Composant Card réutilisable
+• Mise en page responsive
+
+Page logement
+• Carrousel d’images
+• Tags
+• Collapse (description / équipements)
+• Gestion des erreurs si le logement n’existe pas
+
+Page À propos
+• Liste de collapses dynamiques
+
+Page 404
+• Message d’erreur
+• Lien de retour vers l’accueil
+
+Navigation
+• Header + Footer
+• Routes gérées avec React Router
+
+
+**********************************************************************************
+
+## Installation et Lancement du projet
+
+npm install
+npm run dev
+L’application sera accessible à l’adresse :
+<http://localhost:5173>
+
+## Auteur
+
+Auteur : Stéphanie DAUGAS
+**Projet réalisé dans le cadre du parcours Intégrateur Web – OpenClassrooms**
