@@ -57,15 +57,26 @@ Navigation
 • Header + Footer
 • Routes gérées avec React Router
 
-
 **********************************************************************************
 
 ## Installation et Lancement du projet
 
+1**Cloner le dépôt
+Pour récupérer le projet en local : 
+
+Puis entrer dans le dossier :
+cd kasa
+
+2**Installer les dépendances
 npm install
+
+3**Lancer le serveur de développement
 npm run dev
-L’application sera accessible à l’adresse :
+
+Une fois le serveur lancé, l’application sera accessible à l’adresse suivante :
 <http://localhost:5173>
+
+**********************************************************************************
 
 ## Auteur
 
