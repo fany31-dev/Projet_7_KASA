@@ -1,8 +1,9 @@
 import { useParams, Navigate } from 'react-router-dom';
 import DataLogement from '@/data/logements.json';
-import Banner from '../../components/Banner/Banner';
+import Carousel from '../../components/Carousel/Carousel';
 import Collapse from '../../components/Collapse/Collapse';
 import Tag from '../../components/Tag/Tag';
+import Stars from '../../components/Stars/Stars';
 import './Logements.scss';
 
 function Logements() {
@@ -16,32 +17,39 @@ function Logements() {
   return (
     <>
       <div className="ficheLogement">
-        <Banner
-          pictures={logement.pictures}
-          noFilter={true}
-          isCarrousel={true}
-          alt={logement.title}
-        />
+        <Carousel pictures={logement.pictures} alt={logement.title} />
         <div className="ficheLogement__container">
-          <div className="ficheLogement__title">
-            <h1 className="ficheLogement__title__name">{logement.title}</h1>
-            <p className="ficheLogement__title__localisation">
-              {logement.location}
-            </p>
+          <div className="ficheLogement__location">
+            <div className="ficheLogement__location__title">
+              <h1 className="ficheLogement__location__title-name">
+                {logement.title}
+              </h1>
+              <p className="ficheLogement__location__title-city">
+                {logement.location}
+              </p>
+            </div>
+            <div className="ficheLogement__location__tags">
+              <Tag tags={logement.tags} />
+            </div>
           </div>
-          <div className="ficheLogement__host">
-            <p className="ficheLogement__host__name">{logement.host.name}</p>
-            <img
-              className="ficheLogement__host__picture"
-              src={logement.host.picture}
-              alt={logement.host.name}
-            />
+
+          <div className="ficheLogement__vendor">
+            <div className="ficheLogement__vendor__host">
+              <p className="ficheLogement__vendor__host-name">
+                {logement.host.name}
+              </p>
+              <img
+                className="ficheLogement__vendor__host-picture"
+                src={logement.host.picture}
+                alt={logement.host.name}
+              />
+            </div>
+            <div className="ficheLogement__vendor__rating">
+              <Stars rating={logement.rating} />
+            </div>
           </div>
         </div>
 
-        <div>
-          <Tag tags={logement.tags} />
-        </div>
         <div className="ficheLogement__description">
           <Collapse
             isLogementPage={true}
