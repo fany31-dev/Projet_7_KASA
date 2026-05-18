@@ -1,23 +1,40 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
-  gap: 20px;
-  padding: 15px 15px 0px 15px;
+  min-width: 115px;
+  gap: 30px;
+  padding-top: 10px;
 
   &__element {
     width: auto;
     height: 25px;
     color: $color-secondary;
     background-color: $color-primary;
-    border-radius: 10px;
     font-size: 14px;
     font-weight: 700;
     padding: 0 20px;
     border: 1px solid $color-primary;
-    border-radius: 25px;
     justify-content: center;
     display: flex;
+    border-radius: 25px;
     align-items: center;
+  }
+}
+
+/********version mobile*****/
+
+@media (max-width: 468px) {
+  .tags {
+    min-width: 84px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__element {
+      min-width: 84px;
+      height: 18px;
+      font-size: 10px;
+      padding: 5px;
+    }
   }
 }

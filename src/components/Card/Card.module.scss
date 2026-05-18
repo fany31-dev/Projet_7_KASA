@@ -41,6 +41,10 @@
   .card {
     height: 255px;
 
+    &:hover {
+      transform: scale(0.9);
+    }
+
     &__title {
       width: 270px;
       font-size: $size-text;

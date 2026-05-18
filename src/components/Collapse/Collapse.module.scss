@@ -5,6 +5,13 @@
 
   &__ficheLogement {
     width: 582px;
+    margin: 10px 0px 20px 0px;
+    .collapse__title {
+      border-radius: 10px;
+    }
+    .collapse__text__open {
+      border-radius: 10px;
+    }
   }
 
   &__title {
@@ -37,9 +44,13 @@
   &__text {
     overflow: hidden;
     animation: slide-up 0.3s forwards ease-in-out;
+    font-size: 18px;
     &__list {
       list-style: none;
       margin: 0;
+      li {
+        font-size: 18px;
+      }
     }
   }
 
@@ -48,7 +59,11 @@
     overflow: hidden;
     animation: slide-down 0.3s forwards ease-in-out;
     background-color: $color-bckgrd-collapse;
-    border-radius: 5px;
+    border-radius: 10px;
+    p {
+      font-size: 18px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -98,14 +113,57 @@
 
 /********version mobile*****/
 
-@media (max-width: 768px) {
+@media (max-width: 468px) {
   .collapse {
+    margin: 10px auto;
+    &__ficheLogement {
+      width: 100%;
+      border-radius: 5px;
+    }
     &__title {
       height: 30px;
 
       h2 {
         font-size: 13px;
       }
+    }
+
+    &__arrow,
+    &__arrow__open {
+      width: 24px;
+      height: 24px;
+    }
+
+    &__text,
+    &__text__open {
+      p,
+      li {
+        font-size: 12px;
+      }
+    }
+  }
+
+  @keyframes slide-down {
+    from {
+      max-height: 0;
+      padding: 0 20px;
+    }
+
+    to {
+      max-height: auto;
+      padding: 15px;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      max-height: auto;
+      padding: 15px;
+    }
+
+    to {
+      max-height: 0;
+      padding: 0 20px;
     }
   }
 }

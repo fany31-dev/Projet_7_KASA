@@ -1,6 +1,6 @@
 .star {
   display: flex;
-  gap: 5px;
+  gap: 15px;
 
   &__rating {
     width: 24px;
@@ -12,6 +12,7 @@
 
 @media (max-width: 768px) {
   .star {
+    gap: 8px;
     &__rating {
       width: 16px;
       height: 16px;
