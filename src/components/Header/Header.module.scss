@@ -31,7 +31,7 @@
   }
 }
 
-/************* tablette et Mobile *******************/
+/************* tablette *******************/
 @media (max-width: 768px) {
   .header__container {
     min-width: 335px;
@@ -52,16 +52,16 @@
     }
 
     .nav__link {
-      font-size: 18px;
+      font-size: $size-nav-m;
     }
   }
 }
 
 /************* Mobile *******************/
-@media (max-width: 468px) {
+@media (max-width: 480px) {
   .header__container {
     .nav__link {
-      font-size: 12px;
+      font-size: $size-nav-s;
       text-transform: uppercase;
     }
   }

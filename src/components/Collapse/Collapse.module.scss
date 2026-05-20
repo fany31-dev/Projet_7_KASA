@@ -27,13 +27,13 @@
     border-radius: 5px;
 
     h2 {
-      font-size: 18px;
+      font-size: $size-title2-s;
     }
   }
 
   &__arrow {
-    width: 32px;
-    height: 32px;
+    width: $size-arrow;
+    height: $size-arrow;
     animation: rotate-close 0.3s forwards ease-in-out;
   }
 
@@ -44,12 +44,12 @@
   &__text {
     overflow: hidden;
     animation: slide-up 0.3s forwards ease-in-out;
-    font-size: 18px;
+    font-size: $size-text;
     &__list {
       list-style: none;
       margin: 0;
       li {
-        font-size: 18px;
+        font-size: $size-text;
       }
     }
   }
@@ -61,7 +61,7 @@
     background-color: $color-bckgrd-collapse;
     border-radius: 10px;
     p {
-      font-size: 18px;
+      font-size: $size-text;
       font-weight: 400;
     }
   }
@@ -111,9 +111,29 @@
   }
 }
 
+/********version tablette*****/
+
+@media (max-width: 768px) {
+  .collapse {
+    &__arrow,
+    &__arrow__open {
+      width: $size-arrow-m;
+      height: $size-arrow-m;
+    }
+
+    &__text,
+    &__text__open {
+      p,
+      li {
+        font-size: $size-text-s;
+      }
+    }
+  }
+}
+
 /********version mobile*****/
 
-@media (max-width: 468px) {
+@media (max-width: 480px) {
   .collapse {
     margin: 10px auto;
     &__ficheLogement {
@@ -122,23 +142,24 @@
     }
     &__title {
       height: 30px;
+      border-radius: 5px;
 
       h2 {
-        font-size: 13px;
+        font-size: $size-text-s;
       }
     }
 
     &__arrow,
     &__arrow__open {
-      width: 24px;
-      height: 24px;
+      width: $size-arrow-s;
+      height: $size-arrow-s;
     }
 
     &__text,
     &__text__open {
       p,
       li {
-        font-size: 12px;
+        font-size: $size-text-s;
       }
     }
   }
