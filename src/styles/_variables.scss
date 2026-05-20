@@ -1,12 +1,18 @@
 // variables
 // -----------------------------
-$color-primary: #FF6060;
-$color-secondary: #FFFFFF;
+$color-primary: #ff6060;
+$color-secondary: #ffffff;
 $color-background-main: #ffffff;
-$color-background-gallery: #F6F6F6 ;
-$color-bckgrd-collapse: #F6F6F673;
+$color-background-gallery: #f6f6f6;
+$color-bckgrd-collapse: #f6f6f673;
 $color-backgd-footer: #000000;
-$color-background-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
+$color-background-gradient: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(10, 10, 10, 0) 42%,
+  rgba(4, 4, 4, 0.205) 99.99%,
+  rgba(0, 0, 0, 0.5) 100%
+);
 //----------------------
 
 // Style Police
@@ -15,13 +21,34 @@ $font-general: 'Montserrat', sans-serif;
 //----------------------
 
 // Taille Police
-//----------------------
 $size-logo: 35px;
-$size-text-banner: 48px;
-$size-title: 36px;
-$Size-title_2: 18px;
-$size-title_2_lg: 24px;
-$size-text: 18px;
 $size-nav: 24px;
-$size-card : 18px;
+$size-nav-m: 18px;
+$size-nav-s: 12px;
+$size-title: 36px;
+$size-title2: 24px;
+$size-title2-s: 18px;
+$size-text: 18px;
+$size-text-m: 14px;
+$size-text-s: 12px;
+$size-card: 18px;
+$size-text-banner: 48px;
+$size-text-banner-m: 30px;
+$size-text-banner-s: 24px;
+$size-counter: 18px;
+$size-counter-s: 14px;
+$size-arrow: 32px;
+$size-arrow-m: 24px;
+$size-arrow-s: 12px;
+$size-tag: 18px;
+$size-tag-s: 12px;
+$size-erreur-404: 288px;
+$size-erreur-404-s: 96px;
+$size-erreur-text: 36px;
+$size-erreur-text-s: 18px;
+$size-erreur-link: 18px;
+$size-erreur-link-s: 14px;
+$size-footer: 24px;
+$size-footer-s: 12px;
+
 //----------------------
