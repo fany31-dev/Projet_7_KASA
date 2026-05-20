@@ -1,59 +1,186 @@
 .ficheLogement {
-  &__description {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px;
-  }
-
-  &__title {
-    width: 635px;
-    height: 77px;
-    padding: 10px 0;
-
-    &__name {
-      font-weight: 500;
-      font-size: 36px;
-      color: $color-primary;
-    }
-
-    &__localisation {
-      font-weight: 500;
-      padding: 5px;
-    }
-  }
-  &__host {
-    width: 167px;
-    height: 64px;
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    &__name {
-      width: 93px;
-      height: 52px;
-      color: $color-primary;
+    padding: 10px 0;
+  }
+
+  &__location {
+    &__title {
+      &-name {
+        margin: 10px 0 10px 0;
+        font-weight: 500;
+        font-size: $size-title;
+        color: $color-primary;
+      }
+      &-city {
+        font-size: $size-text;
+        font-weight: 500;
+        margin: 10px 0 10px 0;
+      }
     }
-    &__picture {
-      width: 64px;
+    &__tags {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+    }
+  }
+
+  &__vendor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    gap: 30px;
+
+    &__host {
+      width: 180px;
       height: 64px;
-      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      &-name {
+        width: 100px;
+        color: $color-primary;
+        text-align: end;
+        padding: 0 10px 0 0;
+      }
+      &-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 15px 0;
+  }
+
+  &__description {
+    display: flex;
+    width: 1240px;
+    gap: 76px;
+  }
+}
+
+/********version tablette*****/
+
+@media (max-width: 768px) {
+  .ficheLogement {
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    &__location {
+      &__title {
+        width: 100%;
+        &-name {
+          font-size: $size-title2-s;
+          margin: 0;
+        }
+        &-city {
+          padding-top: 10px;
+          margin: 0;
+          font-size: $size-text-m;
+        }
+      }
+      &__tags {
+        margin: 10px 0;
+      }
+    }
+
+    &__vendor {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+
+      &__host {
+        width: auto;
+        height: 64px;
+        display: flex;
+        flex-direction: row;
+        margin: 20px 0;
+        align-items: center;
+        &-name {
+          color: $color-primary;
+          text-align: end;
+          padding: 0 10px 0 0;
+        }
+        &-picture {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__rating {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      gap: 10px;
     }
   }
 }
 
 /********version mobile*****/
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .ficheLogement {
+    &__container {
+      padding: 15px;
+    }
+
+    &__vendor {
+      &__host {
+        height: 33px;
+        width: auto;
+        margin: 0;
+        justify-content: flex-end;
+        &-name {
+          font-size: $size-text-s;
+          width: 50%;
+          font-weight: 500;
+        }
+        &-picture {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    &__rating {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
     &__description {
+      display: flex;
       flex-direction: column;
-      justify-content: center;
+      width: auto;
+      gap: 10px;
+      padding: 0 10px 0 10px;
     }
   }
 }
