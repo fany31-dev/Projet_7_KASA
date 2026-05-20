@@ -32,11 +32,11 @@
     z-index: 2;
     color: white;
     font-weight: 700;
-    font-size: $Size-title_2;
+    font-size: $size-title2-s;
   }
 }
 
-/************* Mobile *******************/
+/************* Tablette *******************/
 @media (max-width: 768px) {
   .card {
     height: 255px;
@@ -47,7 +47,6 @@
 
     &__title {
       width: 270px;
-      font-size: $size-text;
       top: 200px;
     }
   }

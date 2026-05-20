@@ -10,7 +10,7 @@
     height: 25px;
     color: $color-secondary;
     background-color: $color-primary;
-    font-size: 14px;
+    font-size: $size-tag;
     font-weight: 700;
     padding: 0 20px;
     border: 1px solid $color-primary;
@@ -23,7 +23,7 @@
 
 /********version mobile*****/
 
-@media (max-width: 468px) {
+@media (max-width: 480px) {
   .tags {
     min-width: 84px;
     display: flex;
@@ -33,7 +33,7 @@
     &__element {
       min-width: 84px;
       height: 18px;
-      font-size: 10px;
+      font-size: $size-tag-s;
       padding: 5px;
     }
   }
