@@ -65,7 +65,7 @@ Navigation
 Pour récupérer le projet en local : 
 
 Puis entrer dans le dossier :
-cd kasa
+cd Projet_7_Kasa\
 
 2**Installer les dépendances
 npm install
