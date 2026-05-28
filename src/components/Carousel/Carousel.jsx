@@ -13,7 +13,7 @@ function Carousel({ image, pictures, alt }) {
   };
 
   const nextPicture = () => {
-    setCurrentIndex((next) => (next - 1 + images.length) % images.length);
+    setCurrentIndex((next) => (next + 1 + images.length) % images.length);
   };
 
   useEffect(() => {
